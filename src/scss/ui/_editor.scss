@@ -1,0 +1,69 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+
+  &__file {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @include m.tel {
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+  &__save-file,
+  &__drop {
+    width: 100%;
+    border: 1px solid v.$border-drop;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+  &__save-file {
+    max-width: 30rem;
+    min-width: 10rem;
+  }
+  &__drop {
+    min-width: 5rem;
+    max-width: 20rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #e9e4e4, rgb(138, 133, 133) 100%);
+  }
+  &__btn {
+    @include m.button(blue, white);
+  }
+  &__edit_first_line,
+  &__edit_second_line {
+    @include m.grid(4, 1);
+    /* display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem; */
+
+    & a img {
+      height: 3rem;
+    }
+  }
+  &__edit_first_line {
+    margin-bottom: 1rem;
+    & input {
+      width: 4rem;
+      height: 3rem;
+    }
+  }
+}
+
+.content {
+  padding: 2rem;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  /* when you click inside the content the solid border doesn't appear */
+  outline: none;
+  min-height: 30rem;
+  margin: 3rem 0;
+  border-radius: 1rem;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Editor</h2>
+        <div class="controls">
+            <div class="controls__file">
+                <select class="controls__drop">
+                    <option value="0">-- Select --</option>
+                    <option value="pdf">Save as PDF</option>
+                    <option value="txt">Save as TXT</option>
+                </select>
+                <input class="controls__save-file" placeholder="Doc. name" type="text">
+                <a class="controls__btn" href="#">Download</a>
+            </div>
+            <div class="controls__edit">
+                <div class="controls__edit_first_line">
+                    <a class="controls__img bold" href="#">
+                        <img src="./build/img/icons8-bold-100.png" alt="bold image">
+                    </a>
+                    <a class="controls__img underscore" href="#">
+                        <img src="./build/img/icons8-u-100.png" alt="underscore image">
+                    </a>
+                    <a class="controls__img italic" href="#">
+                        <img src="./build/img/icons8-italic-100.png" alt="itali image">
+                    </a>
+                    <input class="controls__color" type="color">
+                </div>
+                <div class="controls__edit_second_line">
+                    <a class="controls__img upper" href="#">
+                        <img src="./build/img/icons8-uppercase-50.png" alt="bold image">
+                    </a>
+                    <a class="controls__img lower" href="#">
+                        <img src="./build/img/icons8-lowercase-24.png" alt="underscore image">
+                    </a>
+                    <a class="controls__img order-list" href="#">
+                        <img src="./build/img/icons8-list-30.png" alt="itali image">
+                    </a>
+                    <a class="controls__img UnOrder-list" href="#">
+                        <img src="./build/img/icons8-number-list-format-in-acending-sequence-order-24.png"
+                            alt="itali image">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content" contenteditable="true" spellcheck="false"></div>
+    </div>
+    <script src="./src/JS/app.js" type="module"></script>
+    <script src="./src/JS/htmltopdf.js" type="module"></script>
+</body>
+
+</html>
